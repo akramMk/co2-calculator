@@ -1,0 +1,18 @@
+ul {
+    list-style: disc;
+    margin: 0px;
+    padding-left: 15px;
+}
+
+li.ok, p.ok {
+    color: forestgreen;
+}
+
+li.not-ok, p.not-ok {
+    color: brown;
+
+}
+
+.hide {
+    display: none;
+}

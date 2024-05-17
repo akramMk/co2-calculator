@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Comptes</title>
+    <link rel="stylesheet"  href="css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.4/dist/bootstrap-table.min.css">
+    <link rel="stylesheet"  href="css/style.css">
+    <style>
+        .highlight {
+            background-color: rgba(255, 255, 0, 0.2); 
+            transition: background-color 0.5s; 
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+<h3 class="h3-css">Gestion des comptes</h3>
+
+<section class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped" data-toggle ="table" data-search="true">
+                <thead>
+                <tr>
+                    <th>Login</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Mboudj</td>
+                    <td>Utilisateur</td>
+                    <td>
+                        <button type="button" class="btn btn-success modifier" data-toggle="modal" data-target="#modifierModal" data-row="1">Modifier</button>
+                        <button type="button" class="btn btn-danger supprimer">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mboudj2</td>
+                    <td>Admin</td>
+                    <td>
+                        <button type="button" class="btn btn-success modifier" data-toggle="modal" data-target="#modifierModal" data-row="2">Modifier</button>
+                        <button type="button" class="btn btn-danger supprimer">Supprimer</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mboudj3</td>
+                    <td>Expert</td>
+                    <td>
+                        <button type="button" class="btn btn-success modifier" data-toggle="modal" data-target="#modifierModal" data-row="3">Modifier</button>
+                        <button type="button" class="btn btn-danger supprimer">Supprimer</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<div class="modal fade" id="modifierModal" tabindex="-1" role="dialog" aria-labelledby="modifierModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modifierModalLabel">Modifier le compte</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="nouveauLogin">Nouveau login:</label>
+                        <input type="text" class="form-control" id="nouveauLogin">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Rôle:</label>
+                        <select class="form-control" id="role">
+                            <option>Utilisateur</option>
+                            <option>Expert</option>
+                            <option>Administrateur</option>
+                        </select>
+                    </div>
+                    <input type="hidden" id="rowIndex">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="modifierBtn">Modifier</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="bg-body-tertiary text-center text-lg-start" style="margin-top: 12%;">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <a class="text-body" href="https://mdbootstrap.com/">Politique des cookies,Tous droits réservés</a>
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.22.4/dist/bootstrap-table.min.js"></script>
+<script src="https://unpkg.com/bootstrap-table@1.22.4/dist/local/bootstrap-table-fr-FR.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.4/dist/extensions/auto-refresh/bootstrap-table-auto-refresh.min.js"></script>
+<script type="text/javascript" src="js/common/common.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.modifier').click(function() {
+            var rowIndex = $(this).data('row');
+            var login = $('table tbody tr:nth-child(' + rowIndex + ') td:nth-child(1)').text();
+            var role = $('table tbody tr:nth-child(' + rowIndex + ') td:nth-child(2)').text();
+            $('#nouveauLogin').val(login);
+            $('#role').val(role);
+            $('#rowIndex').val(rowIndex);
+        });
+
+        $('#modifierBtn').click(function() {
+            var nouveauLogin = $('#nouveauLogin').val();
+            var nouveauRole = $('#role').val();
+            var rowIndex = $('#rowIndex').val();
+            $('table tbody tr:nth-child(' + rowIndex + ') td:nth-child(1)').text(nouveauLogin);
+            $('table tbody tr:nth-child(' + rowIndex + ') td:nth-child(2)').text(nouveauRole);
+            $('#modifierModal').modal('hide');
+            $('table tbody tr:nth-child(' + rowIndex + ')').addClass('highlight'); 
+            setTimeout(function() {
+                $('table tbody tr:nth-child(' + rowIndex + ')').removeClass('highlight'); 
+            }, 1000);
+        });
+
+        $('.supprimer').click(function() {
+            $(this).closest('tr').remove();
+        });
+    });
+</script>
+</body>
+</html>

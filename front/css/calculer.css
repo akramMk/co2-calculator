@@ -1,0 +1,24 @@
+.accueil {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(1, 6, 3);
+    margin-top: 18%;
+    margin-bottom: 19.5%;
+}
+
+.btn-light {
+    background : #49A078;
+    color: white;
+    width: 170px;
+    height: 50px;
+}
+
+.btn-light:hover {
+    background : #931B1B;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 1.5%;
+}

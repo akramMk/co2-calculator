@@ -1,0 +1,43 @@
+.conteneur {
+    margin: 5%;
+    margin-right: 25%;
+    margin-left: 25%;
+    padding-top: 0;
+    padding-bottom: 1px;
+    background-color: rgb(205, 198, 198);
+}
+
+.btn1 {
+    margin-right: 40%;
+}
+
+img {
+   margin-right: 7%;
+   margin-bottom: 1%;
+   margin-left: 2%;
+  
+}
+
+.question {
+    padding: 5%
+}
+
+#navButtons {
+    margin: 5%;
+    margin-bottom: 5%;
+}
+
+.images{
+    background-color: rgb(53, 151, 105);
+    padding: 1.5%;
+    margin-bottom: 1%;
+    margin-right: 0;
+}
+
+
+.btn-light:hover {
+    background : #931B1B;
+    color: white;
+}
+
+

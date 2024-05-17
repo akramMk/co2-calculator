@@ -1,0 +1,5 @@
+.vscode/
+.vscode/**
+
+### IntelliJ IDEA ###
+.idea

@@ -1,0 +1,25 @@
+
+.container{
+    margin-bottom:95px ;
+    background-color: #49A078;
+    padding: 40px;
+    max-width: 1536px;
+}
+
+.accueil{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(1, 6, 3);
+    margin-top: 10%;
+    margin-bottom: 6%;
+}
+
+h1{
+    margin-bottom: 5.7%;
+    color: white;
+}
+
+.btn {
+   font-weight :bold;
+}

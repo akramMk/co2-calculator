@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empreinte carbone</title>
+    <link rel="stylesheet" href="css/result.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.4/dist/bootstrap-table.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="navbar-placeholder"></div>
+    <div class="carbon-footprint">
+        <h2 id="result">Mon empreinte carbone par jour: 9.9 tCO2eq</h2>
+        <div class="column">
+            <div class="category Trans">
+                <img src="images/auto.png" alt="Transport">
+                <span>Transport</span>
+                <span id="transport-quantite" style="color:white;"> 1T</span>
+            </div>
+            <div class="category al">
+                <img src="images/assiette.png" alt="Alimentation">
+                <span>Alimentation</span>
+                <span id="alimentation-quantite" style="color:white;">2T</span>
+            </div>
+        </div>
+        <div class="column">
+            <div class="category log">
+                <img src="images/house.svg" alt="Logement">
+                <span>Logement</span>
+                <span id="logement-quantite" style="color:white;">5.5T</span>
+            </div>
+            <div class="category div">
+                <img src="images/divers.png" alt="Divers">
+                <span>Divers</span>
+                <span id="divers-quantite" style="color:white;">0.5T</span>
+            </div>
+        </div>
+        <div class="column">
+            <div class="category ss">
+                <img src="images/service.png" alt="Services sociétaux">
+                <span>Services sociétaux</span>
+                <span id="services-sociaux-quantite" style="color:white;">0.9T</span>
+            </div>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary btn-lg btn-light btn1"
+        style="background-color:#14845f; color:white; margin-left: 50%;" >Modifier</button>
+    <button type="button" class="btn btn-primary btn-lg btn-light"
+        style="background-color:#14845f; color:white;" onclick="window.location.href = 'questionnaire.html'">Recommencer</button>
+
+    <footer class="bg-body-tertiary text-center text-lg-start" style="margin-top: 5%;">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2024 Copyright:
+            <a class="text-body" href="https://mdbootstrap.com/">Politique des cookies,Tous droits réservés</a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/vendor/jquery-3.7.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/common/common.js"></script>
+    <script src="js/result.js"> </script>
+</body>
+
+</html>

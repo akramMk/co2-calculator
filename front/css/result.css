@@ -1,0 +1,56 @@
+/* result page without responsive*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .carbon-footprint {
+    background-color: rgba(0, 0, 0, 0.075);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 90px auto; ;
+    width: 60%;
+  }
+  
+  .carbon-footprint h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .column {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .div{
+    background-color: rgb(107, 24, 89);
+  }
+  .category {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #49A078;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+  }
+  .log{
+    background-color: #3d6869;
+  }
+  .category img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .category span {
+    margin-right: 20px;
+    color: #333;
+  }
+  
+  span{
+    font-weight: bold;
+  }

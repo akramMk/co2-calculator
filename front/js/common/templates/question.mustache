@@ -1,0 +1,8 @@
+<h3> {{questionLabel}} </h3>
+<form>
+    {{#answers}}
+        <input type="checkbox" id="{{id}}" class="custom-checkbox user-answer" {{#checked}} checked {{/checked}} >
+        <label for="{{id}}">{{description}}</label>
+        <br>
+    {{/answers}}
+</form>

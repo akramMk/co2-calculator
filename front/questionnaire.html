@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionnaire</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/questionnaire.css ">
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="conteneur">
+    <div class="images">
+      <img src="./images/auto.png" height="65px" width="65px" alt="transport" class="img-auto">
+      <img src="./images/house.svg" height="65px" width="65px" alt="house" class="img-house">
+      <img src="./images/assiette.png" height="65px" width="65px" alt="eat" class="img-assiette">
+      <img src="./images/divers.png" alt="divers" height="65px" width="65px" class="img-divers">
+      <img src="./images/service.png" height="65px" width="65px" alt="transport" class="img-service">
+    </div>
+
+    <div class="question">
+      <!-- question à récuperer du backend, j'ai mis une statique temporairement -->
+      <h3> Quel moyen de transport prenez-vous tous les jours ? </h3>
+      <form>
+        <input type="checkbox" id="velo" class="custom-checkbox">
+        <label for="velo">Vélo</label>
+        <br>
+        <input type="checkbox" id="voiture" class="custom-checkbox">
+        <label for="voiture">Voiture</label>
+        <br>
+        <input type="checkbox" id="metro" class="custom-checkbox">
+        <label for="metro">Métro</label>
+        <br>
+        <input type="checkbox" id="train" class="custom-checkbox">
+        <label for="train">Train</label>
+        <br>
+        <input type="checkbox" id="avion" class="custom-checkbox">
+        <label for="avion">Avion</label>
+        <br>
+        <input type="checkbox" id="trotinette" class="custom-checkbox">
+        <label for="trotinette">Trottinette</label>
+        <br>
+        <input type="checkbox" id="bus" class="custom-checkbox">
+        <label for="bus">Bus</label>
+        <br>
+      </form>
+    </div>
+
+    <div id="navButtons">
+      <button id="buttonPrev" type="button" class="btn btn-primary btn-lg btn-light btn1">Précedent</button>
+      <button id="buttonNext" type="button" class="btn btn-primary btn-lg btn-light">Suivant</button>
+    </div>
+
+  </div>
+
+  </div>
+
+  <footer class="bg-body-tertiary text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2024 Copyright:
+      <a class="text-body" href="https://mdbootstrap.com/">Politique des cookies,Tous droits réservés</a>
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="js/vendor/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/vendor/mustache.min.js"></script>
+  <script type="text/javascript" src="js/common/common.js"></script>
+  <script type="text/javascript" src="js/questionnaire.js"></script>
+
+</body>
+
+</html>
